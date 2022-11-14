@@ -1,5 +1,7 @@
 package scripts.registers;
 
+import content.items.EmeraldAxe;
+import content.items.EmeraldHoe;
 import content.items.EmeraldSword;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,6 +15,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, Main.MODID);
 
     public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword", EmeraldSword::new);
+    public static final RegistryObject<Item> EMERALD_AXE = ITEMS.register("emerald_axe", EmeraldAxe::new);
+    public static final RegistryObject<Item> EMERALD_HOE = ITEMS.register("emerald_hoe", EmeraldHoe::new);
+
 
 
     public static void register(IEventBus eventBus) {
