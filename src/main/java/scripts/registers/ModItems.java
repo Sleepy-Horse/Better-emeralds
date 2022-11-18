@@ -2,6 +2,7 @@ package scripts.registers;
 
 import content.items.EmeraldAxe;
 import content.items.EmeraldHoe;
+import content.items.EmeraldPickaxe;
 import content.items.EmeraldSword;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +18,7 @@ public class ModItems {
     public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword", EmeraldSword::new);
     public static final RegistryObject<Item> EMERALD_AXE = ITEMS.register("emerald_axe", EmeraldAxe::new);
     public static final RegistryObject<Item> EMERALD_HOE = ITEMS.register("emerald_hoe", EmeraldHoe::new);
+    public static final RegistryObject<Item> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", EmeraldPickaxe::new);
 
 
 

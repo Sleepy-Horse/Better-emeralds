@@ -2,7 +2,7 @@ package content.events;
 
 
 import content.items.EmeraldAxe;
-import content.items.EmeraldHoe;
+import content.items.EmeraldPickaxe;
 import content.items.EmeraldSword;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.effect.MobEffect;
@@ -10,15 +10,9 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.Potion;
-import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import scripts.Main;
 
@@ -71,5 +65,16 @@ public class ModEvents {
             return;
         }
         enemy.addEffect(new MobEffectInstance(Objects.requireNonNull(MobEffect.byId(7)), 10), player);
+    }
+
+    @SubscribeEvent
+    public static void EmeraldPickaxeDrop(BlockEvent.BreakEvent breakEvent){
+        if (breakEvent.getPlayer() == null)
+            return;
+        Player player = breakEvent.getPlayer();
+        ItemStack itemStack = player.getItemInHand(InteractionHand.MAIN_HAND);
+        if (!(itemStack.getItem() instanceof EmeraldPickaxe))
+            return;
+
     }
 }

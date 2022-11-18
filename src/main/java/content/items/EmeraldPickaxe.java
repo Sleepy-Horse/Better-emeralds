@@ -10,7 +10,4 @@ public class EmeraldPickaxe extends PickaxeItem {
     public EmeraldPickaxe() {
         super(CustomTiers.EMERALD, 1, -2.8F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS));
     }
-
-    //@Override
-
 }
