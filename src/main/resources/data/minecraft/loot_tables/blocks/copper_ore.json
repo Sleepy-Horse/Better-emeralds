@@ -74,7 +74,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:diamond_ore",
+              "name": "minecraft:copper_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -93,7 +93,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:diamond",
+              "name": "minecraft:raw_copper",
               "functions": [
                 {
                   "function": "minecraft:apply_bonus",

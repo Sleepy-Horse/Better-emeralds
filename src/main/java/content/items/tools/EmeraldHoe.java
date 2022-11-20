@@ -1,4 +1,4 @@
-package content.items;
+package content.items.tools;
 
 import com.mojang.datafixers.util.Pair;
 import content.customthings.CustomTiers;

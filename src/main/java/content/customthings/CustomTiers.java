@@ -15,7 +15,11 @@ import net.minecraft.world.item.crafting.Ingredient;
 public enum CustomTiers implements Tier{
     EMERALD(2, 250, 6.0F, 2.0F, 14, () -> {
         return Ingredient.of(Items.EMERALD);
+    }),
+    EMERALD_SHOVEL(2, 250, 13.2F, 2.0F, 14, () -> {
+        return Ingredient.of(Items.EMERALD);
     });
+
 
     private final int level;
     private final int uses;

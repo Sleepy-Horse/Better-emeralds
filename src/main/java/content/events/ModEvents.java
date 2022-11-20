@@ -1,9 +1,9 @@
 package content.events;
 
 
-import content.items.EmeraldAxe;
-import content.items.EmeraldPickaxe;
-import content.items.EmeraldSword;
+import content.items.tools.EmeraldAxe;
+import content.items.tools.EmeraldPickaxe;
+import content.items.tools.EmeraldSword;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,6 +13,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import scripts.Main;
 
@@ -67,14 +68,9 @@ public class ModEvents {
         enemy.addEffect(new MobEffectInstance(Objects.requireNonNull(MobEffect.byId(7)), 10), player);
     }
 
-    @SubscribeEvent
-    public static void EmeraldPickaxeDrop(BlockEvent.BreakEvent breakEvent){
-        if (breakEvent.getPlayer() == null)
-            return;
-        Player player = breakEvent.getPlayer();
-        ItemStack itemStack = player.getItemInHand(InteractionHand.MAIN_HAND);
-        if (!(itemStack.getItem() instanceof EmeraldPickaxe))
-            return;
 
+    @SubscribeEvent
+    public static void ApplyEmeraldArmorDiscount(VillagerTradesEvent event){
+        event.getTrades().
     }
 }

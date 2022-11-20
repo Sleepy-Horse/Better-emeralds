@@ -1,4 +1,4 @@
-package content.items;
+package content.items.tools;
 
 import content.customthings.CustomTiers;
 import net.minecraft.world.item.CreativeModeTab;

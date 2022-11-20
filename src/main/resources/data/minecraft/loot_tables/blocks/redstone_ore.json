@@ -22,7 +22,7 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.25
+                  "chance": 0.5
                 }
               ]
             },
@@ -74,7 +74,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:diamond_ore",
+              "name": "minecraft:redstone_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -93,21 +93,27 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:diamond",
+              "name": "minecraft:redstone",
               "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "type": "minecraft:uniform",
+                    "min": 4,
+                    "max": 5
+                  },
+                  "add": false
+                },
                 {
                   "function": "minecraft:apply_bonus",
                   "enchantment": "minecraft:fortune",
-                  "formula": "minecraft:ore_drops"
+                  "formula": "minecraft:uniform_bonus_count",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
                 },
                 {
                   "function": "minecraft:explosion_decay"
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {}
                 }
               ]
             }

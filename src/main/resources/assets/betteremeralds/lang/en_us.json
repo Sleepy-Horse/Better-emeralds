@@ -1,6 +1,7 @@
 {
-  "item.betteremeralds.emerald_axe": "Emerald_axe",
+  "item.betteremeralds.emerald_sword": "Emerald_sword",
   "item.betteremeralds.emerald_pickaxe": "Emerald_pickaxe",
-  "item.betteremeralds.emerald_hoe": "Emerald_hoe",
-  "item.betteremeralds.emerald_sword": "Emerald_sword"
+  "item.betteremeralds.emerald_axe": "Emerald_axe",
+  "item.betteremeralds.emerald_shovel": "Emerald_shovel",
+  "item.betteremeralds.emerald_hoe": "Emerald_hoe"
 }
